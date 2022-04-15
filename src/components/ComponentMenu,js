@@ -1,0 +1,12 @@
+import css from './ComponentMenu.module.css';
+
+function ComponentMenu(){
+
+    return(
+        <div>
+            ComponentMenu
+        </div>
+    );
+}
+
+export default ComponentMenu;
