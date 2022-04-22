@@ -3,7 +3,7 @@ import css from './CardMenu.module.css';
 function CardMenu(){
 
     return(
-        <div>
+        <div className={css.section}>
             CardMenu
         </div>
     );
