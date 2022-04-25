@@ -1,5 +1,8 @@
-.section {
+.bar {
     width:100%;
     background-color:aquamarine;   
     height: 50px;
+    position:absoulute;
+    inset: 0;
+    z-index:99;
 }

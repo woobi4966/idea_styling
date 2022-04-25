@@ -1,8 +1,9 @@
 .section {
     background-color:blue;
-    /* width:100vw; */
-    /* height: 100vh; */
-    position:relative;
-    /* width:; */
-    float:left;
+    min-width:400px;
+    position:absolute;
+    display:flex;
+    height:100vh;
+    left:280px;
+    flex-wrap: wrap;
 }

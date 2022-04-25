@@ -1,7 +1,11 @@
 .section {
     width:280px;
     background-color:#deb887;
-    height: 100%;
-    float:right;
+    height: 100vh;
+    position:absolute;
+    display:flex;
     right:0;
+    
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
