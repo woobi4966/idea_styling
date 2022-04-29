@@ -1,9 +1,19 @@
 .section {
     background-color:blue;
-    min-width:400px;
     position:absolute;
     display:flex;
+    width:100px;
     height:100vh;
     left:280px;
     flex-wrap: wrap;
+}
+
+p {
+    margin-top:50px;
+    color:white;
+}
+
+img {
+    margin-top:30px;
+    /* position:absolute; */
 }

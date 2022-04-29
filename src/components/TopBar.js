@@ -4,7 +4,9 @@ function TopBar(){
 
     return(
         <div className={css.bar}>
-            TopBar
+            <div className={css.logo}>
+                <p>IDEA STYLING</p>
+            </div>
         </div>
     );
 }

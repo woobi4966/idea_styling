@@ -1,10 +1,32 @@
 .section {
     width:280px;
-    background-color:chocolate;
+    background-color:rgb(255, 255, 255);
     height:100vh;
     position:absolute;
-    display:flex;
 
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
+
 }
+
+.section ::-webkit-scrollbar-button{
+    display:none;
+}
+
+
+h1{
+    font-size:30px;
+    margin-left:30px; margin-top:20px;
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:0.5px rgb(219, 219, 219) solid;
+    width:100%;
+}
+
+.cards {
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+

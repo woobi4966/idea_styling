@@ -1,20 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import css from './MainView.module.css';
 
-function MainView(){
-
-    // useState(width, setWidth) = useState(200);
-
-    window.onload=function(){
-        let section = document.getElementsByClassName('section');
-        let window_width = window.innerWidth;
-        console.log(window_width);
-        section.style.width = (window_width - 280*2) + 'px';
-    }
-
-    return(
-        <div className={css.section}></div>
-    );
+function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height} = window;
+    return (width);
 }
 
-export default MainView;
+export default function MainView(){
+
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    // const [rewidth, setreWidth] = useState();
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+
+        document.getElementById('section').style.width = windowDimensions;
+    }, []);
+
+
+    
+    return(
+        <div id='section' className={css.section} width={windowDimensions}>
+            <p>{windowDimensions}</p>    
+        </div>
+    );
+}
