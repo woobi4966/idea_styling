@@ -1,5 +1,32 @@
-.section {
+.bar {
     width:100%;
-    background-color:aquamarine;   
-    height: 50px;
+    background-color:rgb(235, 235, 235);   
+    height: 60px;
+    position:absoulute;
+    inset: 0;
+    z-index:99;
+    display:flex;
+    align-items: center;
+
+    border-bottom: 0.05px solid rgb(206, 206, 206);
+}
+
+.logo {
+    margin-left:20px;
+    width:150px;
+    height:40px;
+    background-color:purple;
+    color:white;
+    text-align:center;
+    border-radius:7px;
+    z-index:1;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo > p {
+    margin:0;
+    z-index:2;
 }

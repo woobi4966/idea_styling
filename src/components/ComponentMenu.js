@@ -3,7 +3,7 @@ import css from './ComponentMenu.module.css';
 function ComponentMenu(){
     return(
         <div className={css.section}>
-            ComponentMenu
+            <h1>Component Menu</h1>
         </div>
     );
 }
