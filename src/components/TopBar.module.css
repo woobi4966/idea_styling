@@ -1,9 +1,9 @@
 .bar {
     width:100%;
-    background-color:rgb(235, 235, 235);   
+    background-color: #F0F0F3;   
     height: 60px;
     position:absoulute;
-    inset: 0;
+    /* inset: 0; */
     z-index:99;
     display:flex;
     align-items: center;
@@ -19,7 +19,7 @@
     color:white;
     text-align:center;
     border-radius:7px;
-    z-index:1;
+    /* z-index:3; */
     
     display:flex;
     align-items: center;
@@ -29,4 +29,135 @@
 .logo > p {
     margin:0;
     z-index:2;
+}
+
+.middle {
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search {
+    border-radius: 15px;
+    background-color:rgb(206, 206, 206);
+    
+    
+    height:35px;
+    display:flex;
+    max-width:700px;
+    min-width:300px;
+    /* width:500px; */
+
+    justify-content: center;
+    align-items: center;
+}
+
+.searchIcon {
+    /* display:absolute; */
+
+    margin-left:5px;
+
+}
+
+.search>input {
+    margin-left:8px;
+    border-style: none;
+    background-color: inherit;
+    min-width:251px;
+    
+    height:33px;
+    font-size:14px;
+}
+
+.search>input:focus {
+    outline-style: none;
+}
+
+.right {
+    display: flex;
+    /* width:200px; */
+    height:100%;
+    /* background-color:red; */
+    justify-content: flex-end;
+    align-items: center;
+    
+    /* padding-left:20px; */
+}
+
+.right>button{
+    margin-left:5px;
+}
+
+
+.btn {
+    border-radius: 10px;
+    background-color:orange;
+    border : none;
+    width:75px;
+    height:35px;
+    font-weight: 800;
+    font-size:15px;
+    margin:0 8px;
+    color:rgb(73, 63, 36);
+
+    cursor:pointer;
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    filter: drop-shadow(-3px -3px 6px #FFFFFF);
+    filter: drop-shadow(3px 3px 6px #AEAEC0 40%);
+
+    transition: 0.2s;
+}
+.btn>div{
+    margin:0 2px;
+    margin-top:2px;
+}
+
+.btn:hover{
+    background-color:rgb(255, 95, 37);
+    color: rgb(75, 27, 9);
+}
+
+.miniBtn {
+    border-radius: 10px;
+    background-color: #ededee;
+    border: none;
+    width:38px;
+    height:35px;
+    font-size:15px;
+    cursor:pointer;
+    color:black;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    filter: drop-shadow(-1px -1px 3px #FFFFFF);
+    filter: drop-shadow(1px 1px 3px #AEAEC0 40%);
+
+    transition:0.2s;
+}
+
+.miniBtn:hover{
+    background-color:#d8d8d8;
+}
+
+/* Share Btn */
+.middle>.miniBtn{
+    background-color: rgb(193, 215, 240);
+}
+
+.middle>.miniBtn:hover{
+    background-color:rgb(147, 183, 226);
+
+}
+
+/* Setting Btn */
+.right>.miniBtn:nth-child(2){
+    margin-right:20px;
 }
