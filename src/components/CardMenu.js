@@ -6,7 +6,7 @@ import css from './CardMenu.module.css';
 function CardMenu(){
     return(
         <div className={classnames(css.section)}>
-            <h1>Card Menu</h1>
+            {/* <h1>Card Menu</h1> */}
             <div className={css.cards}>
                 <Card title="hello"/>
                 <Card title="hello"/>
