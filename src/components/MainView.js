@@ -26,7 +26,7 @@ export default function MainView(){
 
     useEffect(() => {
         window.onresize = resize;
-    });
+    }, [window.innerWidth]);
 
     ////////////////////////////////////
     // 1. board을 클릭하면 글을 쓸 수 있다
