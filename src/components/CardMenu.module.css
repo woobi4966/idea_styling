@@ -1,52 +1,50 @@
 .section {
     /* top:-60px; */
     /* padding-top:50px; */
-    width:280px;
-    background-color:rgb(255, 255, 255);
-    height:100vh;
-    position:absolute;
-
+    width: 280px;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    position: absolute;
     overflow-x: hidden;
     overflow-y: scroll;
-
     /* SCROLLBAR STYLE FOR FIREFOX */
     scroll-behavior: smooth;
-    scroll-margin: 2em;
     scrollbar-width: thin;
     
 }
 
-.section::-webkit-scrollbar{
+.section::-webkit-scrollbar {
     opacity: 0;
-    width:8px;
+    width: 8px;
     transition: opacity 0.2s;
 }
 
-.section::-webkit-scrollbar:hover{
+.section::-webkit-scrollbar:hover {
     transform: opacity(1);
 }
+
 .section::-webkit-scrollbar-thumb {
-    border-radius:5px;
-    background-color:rgb(180, 180, 180);
-    margin-left:3px;
+    border-radius: 5px;
+    background-color: rgb(180, 180, 180);
+    margin-left: 3px;
 }
 
-.section::-webkit-scrollbar-thumb:hover{
+.section::-webkit-scrollbar-thumb:hover {
     background-color: grey;
 }
 
-
-h1{
-    font-size:30px;
-    margin-left:30px; margin-top:20px;
-    margin-bottom:20px;
-    padding-bottom:10px;
-    border-bottom:0.5px rgb(219, 219, 219) solid;
-    width:100%;
+h1 {
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px rgb(219, 219, 219) solid;
+    width: 100%;
 }
 
 .cards {
-    display:flex;
+    display: flex;
     align-items: center;
     /* justify-content: center; */
     flex-direction: column;
