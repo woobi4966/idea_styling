@@ -13,7 +13,7 @@
     scroll-behavior: smooth;
     scroll-margin: 2em;
     scrollbar-width: thin;
-    z-index: 2;
+    
 }
 
 .section::-webkit-scrollbar{
@@ -51,4 +51,3 @@ h1{
     /* justify-content: center; */
     flex-direction: column;
 }
-

@@ -6,8 +6,7 @@ import StartPage from './pages/StartPage';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={<StartPage/>}/>
-      <Route path='/main' element={<Main/>}/>
+      <Route path='/' element={<Main/>}/>
     </Routes>
   );
 }

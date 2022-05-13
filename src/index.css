@@ -1,10 +1,12 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 
   /* IF YOU WANT TO BLOCK TEXT DRAG USE THIS CLASSNAME  */
-  .noselect {
+.noselect {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -14,10 +16,16 @@
   }
 
 
-  body{
+body{
 	min-width:600px;
 	min-height:400px;
 }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -64,3 +72,5 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
