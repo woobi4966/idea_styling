@@ -1,3 +1,4 @@
+
 import css from './ComponentMenu.module.css';
 import ExComponent from './ExComponent';
 
@@ -31,6 +32,14 @@ function ComponentMenu(){
 
         </div>
     );
-}
+
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    // Get the element by id
+    const element = document.getElementById("p1");
+    // Add the ondragstart event listener
+    element.addEventListener("dragstart", dragstart_handler);
+  });
 
 export default ComponentMenu;
