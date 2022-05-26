@@ -10,7 +10,6 @@
     /* SCROLLBAR STYLE FOR FIREFOX */
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    
 }
 
 .section::-webkit-scrollbar {
