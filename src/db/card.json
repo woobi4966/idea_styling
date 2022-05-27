@@ -1,0 +1,14 @@
+{
+    "cards" : [
+        {
+            "id" : 1,
+            "mainView" : "<p>Hello, i am json.</p>",
+            "img" : "../../public/logo192.png"
+        },
+        {
+            "id" : 2,
+            "mainView" : "<p>IIII 2.</p>",
+            "img" : "card.jpg"
+        }
+    ]
+}

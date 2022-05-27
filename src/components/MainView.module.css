@@ -49,3 +49,9 @@ div:empty:before{
 div:focus{
     outline:none;
 }
+
+.box {
+    width:300px;
+    height:100px;
+    background-color:grey;
+}

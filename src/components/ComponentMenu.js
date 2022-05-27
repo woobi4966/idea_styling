@@ -1,5 +1,6 @@
 import css from './ComponentMenu.module.css';
 import ExComponent from './ExComponent';
+import Text from './Text';
 
 function ComponentMenu( props ){
 
@@ -32,6 +33,7 @@ function ComponentMenu( props ){
                 onDragOver = {dragOver}
             >
                 <ExComponent id="1" name="ExComponent" />
+                <Text/>
             </div>
         </div>
     );

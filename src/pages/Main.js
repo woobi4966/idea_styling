@@ -28,6 +28,8 @@ function Main(){
         console.log(windowSize.width);
     }
 
+    window.addEventListener('resize',  handleResize);
+
     useEffect(() => {
         window.addEventListener('resize',  handleResize);
         return() => { // 추가된 listener 청소 : 최적화
