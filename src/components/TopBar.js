@@ -21,6 +21,26 @@ function TopBar(props){
         props.showModal();
     }
 
+    // Create CARD
+    function addDay() {
+        fetch(`http://localhost:3001/cards/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            day: days.length + 1,
+          }),
+        }).then(res => {
+          if (res.ok) {
+            alert("생성이 완료 되었습니다");
+            history.push(`/`);
+          }
+        });
+      }
+
+
+
     return(
         <div className={css.bar}>
             <div className={css.logo}>

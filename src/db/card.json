@@ -2,13 +2,10 @@
     "cards" : [
         {
             "id" : 1,
-            "mainView" : "<p>Hello, i am json.</p>",
-            "img" : "../../public/logo192.png"
-        },
-        {
-            "id" : 2,
-            "mainView" : "<p>IIII 2.</p>",
-            "img" : "card.jpg"
+            "title" : "title",
+            "bg" : "../../public/logo192.png",
+            "date" : "2022/05/03",
+            "HTML" : "<p>Hello</p>"
         }
     ]
 }
