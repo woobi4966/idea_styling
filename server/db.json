@@ -1,31 +1,25 @@
 {
-    "c_table":[
+    "cards":[
         {
             "id":1,
-            "u_name":"mike",
-            "title":"Welcome to the japan",
-            "text":"hi good morning",
-            "music":"api",
+            "title":"title_1",
+            "bg":"../../public/logo1.png",
             "date":"2022/05/03",
-            "image":"api"
+            "HTML":"<p>Hello</p>"
         },
         {
             "id":2,
-            "u_name":"jhon",
-            "title":"Welcome to the corea",
-            "text":"hi good night",
-            "music":"api",
+            "title":"title_2",
+            "bg":"../../public/logo2.png",
             "date":"2022/05/04",
-            "image":"api"
+            "HTML":"<p>Hello_1</p>"
         },
         {
             "id":3,
-            "u_name":"mike",
-            "title":"Welcome to the america",
-            "text":"go to school",
-            "music":"api",
-            "date":"2022/05/20",
-            "image":"api"
+            "title":"title_3",
+            "bg":"../../public/logo3.png",
+            "date":"2022/05/05",
+            "HTML":"<p>Hello_2</p>"
         }
     ]
 
