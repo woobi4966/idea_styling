@@ -1,3 +1,5 @@
+import React from 'react';
+
 import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -19,7 +21,6 @@ function TopBar(props){
     function showInfo() {
         props.showModal('info');
     }
-
 
     function showCreateCard() {
       props.showModal('createCard');

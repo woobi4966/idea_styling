@@ -10,6 +10,7 @@ import css from "./ModalInfo.module.css";
 
 export default function ModalCreate(props) {
 
+
     // icons
     const xmarkIcon = <FontAwesomeIcon icon={faXmark} />;
 
@@ -33,6 +34,5 @@ export default function ModalCreate(props) {
             </div>
             <ModalDarkBG className={css.bg} closeModal={closeModal}/>
         </div>
-        
     );
 }

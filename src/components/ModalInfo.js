@@ -4,26 +4,20 @@ import classnames from 'classnames';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket, faXmark } from "@fortawesome/free-solid-svg-icons";
 
-
 import ModalDarkBG from "./ModalDarkBG";
 import css from "./ModalInfo.module.css";
 
 
 
-
 export default function ModalInfo(props) {
-
-    // const [isShow, setIsShow] = useState(true);
 
     const xmarkIcon = <FontAwesomeIcon icon={faXmark} />;
     const faArrowRightFromBracketIcon = <FontAwesomeIcon icon={faArrowRightFromBracket} />;
 
     function closeModal(){
-            // setIsShow(false);
             props.closeModal('info');
         
     }
-    
 
     return(
         <div className={classnames(css.modalBg, "animate__animated", "animate__fadeIn")} >

@@ -7,8 +7,17 @@ import css from './Main.module.css';
 import { useEffect, useState } from 'react';
 import ModalInfo from '../components/ModalInfo';
 import ModalCreate from '../components/ModalCreate';
+import useFetch from '../hooks/useFetch';
+
 
 function Main(){
+
+    // card 데이터들을 가져옴
+
+    // let dbCards = useFetch("http://localhost:3001/cards");
+
+    const [cards, setCards] = useState([]);
+
 
     ////////////////////////////////////////////////////////
     // 0. window.resize 되면 적절한 width, height 값을 얻어냄
@@ -69,7 +78,7 @@ function Main(){
             {isInfoModal ? <ModalInfo closeModal={closeModal}/> : null}
             {isCreateModal ? <ModalCreate closeModal={closeModal}/> : null}
             <TopBar showModal={showModal}  closeModal={closeModal}/>
-            <CardMenu height={windowSize.height} />
+            <CardMenu height={windowSize.height} cards={cards} />
             <MainView width={windowSize.width} height={windowSize.height} />
             <ComponentMenu height={windowSize.height} />
         </div>
