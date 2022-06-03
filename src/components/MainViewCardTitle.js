@@ -7,7 +7,7 @@ export default function MainViewCardTitle( props ) {
 
     return(
         <div className={css.title}>
-        <h1>{title}</h1>
+            <h1>I'm Abstract</h1>
         </div>
     );
 }

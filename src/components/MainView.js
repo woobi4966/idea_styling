@@ -17,8 +17,6 @@ export default function MainView( props ){
     const [html, setHTML] = useState(props.html);
     const [bg, setBg] = useState(props.bg);
     
-    
-
     let newWidth = props.width;
     let newHeight = props.height;
     
@@ -45,12 +43,11 @@ export default function MainView( props ){
 
     function createMarkup() {
         return {
-           __html: 'First &middot; Second'    };
+           __html: 'First &middot; Second' };
      }; 
 
     // let text = `<img src="././public.mainView.jpg">`;
     
-
     ////////////////////////////////////
     // 2. 컴포넌트를 drag and drop 해서 추가할 수 있다
     ////////////////////////////////////
@@ -73,15 +70,19 @@ export default function MainView( props ){
             style={{width: newWidth + 'px', height: newHeight + 'px'}}
         >
             <MainViewCardTitle title={title} />
+        <div
+            className={css.dropBoard}
+
+            onClick = {createText}
+            onDrop = {drop}
+            onDragOver = {dragOver}
+        >
+        </div>
             <MainViewBoard
                 id = "MainView"
                 className={classNames(css.board, '.droppable')}
                 
-                onClick={createText}
-                onDrop = {drop}
-                onDragOver = {dragOver}
-                
-                dangerouslySetInnerHTML={createMarkup()}
+                // dangerouslySetInnerHTML={createMarkup()}
                 // contentEditable='true' placeholder='type anything'   
             />
         </div>

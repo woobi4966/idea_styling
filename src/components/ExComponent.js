@@ -13,6 +13,11 @@ export default function ExComponent(props) {
         e.stopPropagation();
     }
 
+    const style = {
+        width:"300px",
+        height:"50px"
+    }
+
     return(
         <div
             id={props.id}
@@ -20,8 +25,10 @@ export default function ExComponent(props) {
             draggable="true"
             onDragStart={dragStart}
             onDragOver={dragOver}
+            
         >
-            <h1>{props.name}</h1>
+            <div contentEditable='true' style={style}/>
+            {/* <h1>{props.name}</h1> */}
             {/* <h3>{props.id}</h3> */}
         </div>
     );

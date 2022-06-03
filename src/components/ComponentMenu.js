@@ -25,13 +25,15 @@ function ComponentMenu( props ){
             className={css.section}
             style={{height: newHeight + 'px'}}
         >
-            <h1>Component Menu</h1>
             <div
                 className={css.componentList}
                 onDrop = {drop}
                 onDragOver = {dragOver}
             >
                 <ExComponent id="1" name="ExComponent" />
+                <ExComponent id="1" name="ExComponent" />
+                <ExComponent id="1" name="ExComponent" />
+                
             </div>
         </div>
     );

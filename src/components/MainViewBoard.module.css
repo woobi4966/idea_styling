@@ -8,12 +8,12 @@
 .page {
     position:absolute;
 
-    /* top:300px; */
-    /* margin-left:40px; */
+    top:300px;
+    margin-left:40px;
     padding:30px;
-    /* width:500px;
+    width:500px;
     min-width:300px;
-    height:; */
+    height:500px;
     background-color:rgb(255, 250, 236);
     border-radius: 30px;
 
