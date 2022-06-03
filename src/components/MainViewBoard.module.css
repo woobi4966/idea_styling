@@ -1,0 +1,21 @@
+/* .page {
+    width:500px;
+    height:300px;
+    background-color:grey;
+} */
+
+
+.page {
+    position:absolute;
+
+    /* top:300px; */
+    /* margin-left:40px; */
+    padding:30px;
+    /* width:500px;
+    min-width:300px;
+    height:; */
+    background-color:rgb(255, 250, 236);
+    border-radius: 30px;
+
+    color:black;
+}

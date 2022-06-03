@@ -2,26 +2,22 @@ import 'animate.css';
 import classnames from 'classnames';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightFromBracket, faXmark } from "@fortawesome/free-solid-svg-icons";
-
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 import ModalDarkBG from "./ModalDarkBG";
 import css from "./ModalInfo.module.css";
 
 
+export default function ModalCreate(props) {
 
-
-export default function ModalInfo(props) {
-
-    // const [isShow, setIsShow] = useState(true);
-
+    // icons
     const xmarkIcon = <FontAwesomeIcon icon={faXmark} />;
-    const faArrowRightFromBracketIcon = <FontAwesomeIcon icon={faArrowRightFromBracket} />;
 
+
+    // close function
     function closeModal(){
             // setIsShow(false);
-            props.closeModal('info');
-        
+            props.closeModal('createCard');   
     }
     
 
@@ -32,14 +28,7 @@ export default function ModalInfo(props) {
                     <p>Idea Styling</p>
                     <button className={css.close} onClick={closeModal}>{xmarkIcon}</button>
                 </div>
-                <div>
-                    <a href="/privacypolicy">
-                        <div className={css.policy}>
-                            <p>{faArrowRightFromBracketIcon}</p>
-                            <p>개인정보 처리방침</p>
-                        </div>
-                    </a>
-                </div>
+                <p>Create Card</p>
                 <p className={css.copyright}>© 2022 Team Laptop</p>
             </div>
             <ModalDarkBG className={css.bg} closeModal={closeModal}/>

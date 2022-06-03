@@ -4,8 +4,7 @@
             "id" : 1,
             "title" : "title",
             "bg" : "../../public/logo192.png",
-            "date" : "2022/05/03",
-            "HTML" : "<p>Hello</p>"
+            "html" : "<p>Hello</p>"
         }
     ]
 }

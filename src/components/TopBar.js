@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import css from './TopBar.module.css';
 import { faMagnifyingGlass, faPlusCircle, faArrowUpFromBracket, faFloppyDisk, faGear, faInfo } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
 
 
 function TopBar(props){
@@ -18,28 +17,31 @@ function TopBar(props){
 
     // Info btn Events
     function showInfo() {
-        props.showModal();
+        props.showModal('info');
     }
 
-    // Create CARD
-    function addDay() {
-        fetch(`http://localhost:3001/cards/`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            day: days.length + 1,
-          }),
-        }).then(res => {
-          if (res.ok) {
-            alert("생성이 완료 되었습니다");
-            history.push(`/`);
-          }
-        });
-      }
 
+    function showCreateCard() {
+      props.showModal('createCard');
+    }
 
+    // // Create CARD
+    // function addDay() {
+    //     fetch(`http://localhost:3001/cards/`, {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         day: days.length + 1,
+    //       }),
+    //     }).then(res => {
+    //       if (res.ok) {
+    //         alert("생성이 완료 되었습니다");
+    //         history.push(`/`);
+    //       }
+    //     });
+    //   }
 
     return(
         <div className={css.bar}>
@@ -52,7 +54,9 @@ function TopBar(props){
                     <div className={css.SearchIcon}>{searchIcon}</div>
                     <input type='text' placeholder='type word'></input>
                 </div>
-                <button className={classNames(css.btn, css.newBtn)}>
+                <button className={classNames(css.btn, css.newBtn)}
+                    onClick={showCreateCard}
+                >
                     <div>
                         {newIcon}
                     </div>

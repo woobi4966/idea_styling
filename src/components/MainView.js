@@ -1,12 +1,24 @@
-import { text } from '@fortawesome/fontawesome-svg-core';
 import classNames from 'classnames';
 import { useState } from 'react';
 import css from './MainView.module.css';
+import MainViewBoard from './MainViewBoard';
+import MainViewCardTitle from './MainViewCardTitle';
 import Text from './Text';
 
 
 export default function MainView( props ){
+
+    ////////////////////////////////////
+    // 0. props로 card 데이터 받아오기
+    ////////////////////////////////////
+
+    const id = props.id;
+    const [title, setTitle] = useState(props.title);
+    const [html, setHTML] = useState(props.html);
+    const [bg, setBg] = useState(props.bg);
     
+    
+
     let newWidth = props.width;
     let newHeight = props.height;
     
@@ -60,13 +72,8 @@ export default function MainView( props ){
             className={css.section}
             style={{width: newWidth + 'px', height: newHeight + 'px'}}
         >
-            <div className={css.title}>
-                <p>Welcome</p>
-                <p>작성날짜 : 2022. 5. 5.</p>
-                <p>만든이 : author</p>
-            </div>
-            {/* drag and drop without api */}
-            <div
+            <MainViewCardTitle title={title} />
+            <MainViewBoard
                 id = "MainView"
                 className={classNames(css.board, '.droppable')}
                 
@@ -75,10 +82,8 @@ export default function MainView( props ){
                 onDragOver = {dragOver}
                 
                 dangerouslySetInnerHTML={createMarkup()}
-                // contentEditable='true' placeholder='type anything'
-                
-            >
-            </div>
+                // contentEditable='true' placeholder='type anything'   
+            />
         </div>
     );
 }

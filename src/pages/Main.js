@@ -6,6 +6,7 @@ import ComponentMenu from '../components/ComponentMenu';
 import css from './Main.module.css';
 import { useEffect, useState } from 'react';
 import ModalInfo from '../components/ModalInfo';
+import ModalCreate from '../components/ModalCreate';
 
 function Main(){
 
@@ -42,19 +43,31 @@ function Main(){
     // modalInfo 부분
     ////////////////////////////
 
-    const [isModal, setModal] = useState(false);
+    const [isInfoModal, setInfoModal] = useState(false);
+    const [isCreateModal, setIsCreateModal] = useState(false);
 
-    function showModal(){
-        setModal(true);
+    function showModal(type){
+        if(type === 'info'){
+            setInfoModal(true);
+        }
+        else if(type === 'createCard'){
+            setIsCreateModal(true);
+        }
     }
 
-    function closeModal(){
-        setModal(false);
+    function closeModal(type){
+        if(type === 'info'){
+            setInfoModal(false);
+        }
+        else if(type === 'createCard'){
+            setIsCreateModal(false);
+        }
     }
 
     return(
         <div className={css.view}>
-            {isModal ? <ModalInfo closeModal={closeModal}/> : null}
+            {isInfoModal ? <ModalInfo closeModal={closeModal}/> : null}
+            {isCreateModal ? <ModalCreate closeModal={closeModal}/> : null}
             <TopBar showModal={showModal}  closeModal={closeModal}/>
             <CardMenu height={windowSize.height} />
             <MainView width={windowSize.width} height={windowSize.height} />

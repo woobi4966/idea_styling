@@ -5,6 +5,7 @@
 }
 
 
+
   /* IF YOU WANT TO BLOCK TEXT DRAG USE THIS CLASSNAME  */
 .noselect {
 	-webkit-touch-callout: none;
@@ -74,3 +75,12 @@ table {
 }
 
 
+
+h1 {
+	font-size:27px;
+	/* margin-left:30px; margin-top:20px;
+	margin-bottom:20px;
+	padding-bottom:10px; */
+	/* border-bottom:0.5px rgb(219, 219, 219) solid; */
+	/* width:100%; */
+}
