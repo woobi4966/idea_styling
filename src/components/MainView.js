@@ -1,10 +1,16 @@
 import classNames from 'classnames';
 import { useState } from 'react';
+import { DndProvider, useDrop } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import css from './MainView.module.css';
 import MainViewBoard from './MainViewBoard';
 import MainViewCardTitle from './MainViewCardTitle';
 import Text from './Text';
 
+    ////////////////////////////////////
+    // 2. 컴포넌트를 drag and drop 해서 추가할 수 있다
+    // component DnD System
+    
 
 export default function MainView( props ){
 
@@ -26,42 +32,15 @@ export default function MainView( props ){
     
     const [components, setComponents] = useState([]);
 
-
-    function createText(){
-        
-        // if(components[components.length -1] === Text) {
-
-        // }
-        // else {
-            setComponents(...components, [<Text/>]);
-        // }   
-    }
-
-    // function changedHTML(e) {
-    //     setBoardHTML(e.target.value);
-    // }
-
-    function createMarkup() {
-        return {
-           __html: 'First &middot; Second' };
-     }; 
-
-    // let text = `<img src="././public.mainView.jpg">`;
+    // const [{isOver}, drop] = useDrop(() => ({
+    //     accept : "component",
+    //     drop: (item) => addComponentToBoard(item.id), 
+    //     collect : (monitor) => ({
+    //         isOver : !!monitor.isOver(),
+    //     }),
+    // }));
     
-    ////////////////////////////////////
-    // 2. 컴포넌트를 drag and drop 해서 추가할 수 있다
-    ////////////////////////////////////
-
-    function drop(e){
-        const component_id = e.dataTransfer.getData("component_id");
-        const component = document.getElementById(component_id);
-        
-        e.target.appendChild(component); //HTML 뒷 부분에 추가한다.
-    }
-
-    function dragOver(e) {
-        e.preventDefault();
-    }
+    // const addComponentToBoard = (id) => {console.log(id)};
 
     return(
         <div
@@ -69,22 +48,15 @@ export default function MainView( props ){
             className={css.section}
             style={{width: newWidth + 'px', height: newHeight + 'px'}}
         >
-            <MainViewCardTitle title={title} />
-        <div
-            className={css.dropBoard}
-
-            onClick = {createText}
-            onDrop = {drop}
-            onDragOver = {dragOver}
-        >
-        </div>
-            <MainViewBoard
-                id = "MainView"
-                className={classNames(css.board, '.droppable')}
-                
-                // dangerouslySetInnerHTML={createMarkup()}
-                // contentEditable='true' placeholder='type anything'   
-            />
+            <div className={css.row1}>
+                <MainViewCardTitle title={title} />
+            </div>
+            
+            <div className={css.row2}>
+                <DndProvider backend={HTML5Backend}>
+                    <MainViewBoard />
+                </DndProvider>
+            </div>
         </div>
     );
 }

@@ -2,11 +2,11 @@ import CardMenu from '../components/CardMenu';
 import MainView from '../components/MainView';
 import TopBar from '../components/TopBar';
 import ComponentMenu from '../components/ComponentMenu';
-
 import css from './Main.module.css';
 import { useEffect, useState } from 'react';
 import ModalInfo from '../components/ModalInfo';
 import ModalCreate from '../components/ModalCreate';
+import { useDrag } from 'react-dnd';
 
 function Main(){
 
@@ -63,6 +63,10 @@ function Main(){
             setIsCreateModal(false);
         }
     }
+
+
+
+    
 
     return(
         <div className={css.view}>

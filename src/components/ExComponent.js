@@ -1,35 +1,28 @@
 // ExComponent.js
-import classNames from 'classnames';
+import { useDrag } from 'react-dnd';
 import css from './ExComponent.module.css';
 
-export default function ExComponent(props) {
+export default function ExComponent({id, name}) {
 
-    function dragStart(e) {
-        const target = e.target;
-        e.dataTransfer.setData('component_id', target.id);
-    }
+    const [{isDragging}, drag] = useDrag(() => ({
+        type : "component",
+        item : {id : id},
+        collect : (monitor) => ({
+            isDragging : !!monitor.isDragging(),
+        }),
+    }));
 
-    function dragOver(e) {
-        e.stopPropagation();
-    }
-
-    const style = {
-        width:"300px",
-        height:"50px"
-    }
+    const style = {width:"300px", height:"50px"}
 
     return(
         <div
-            id={props.id}
-            className={css.board}    
-            draggable="true"
-            onDragStart={dragStart}
-            onDragOver={dragOver}
+            ref={drag}
+            id={id}
+            className={css.board}
+            style={style}
             
         >
-            <div contentEditable='true' style={style}/>
-            {/* <h1>{props.name}</h1> */}
-            {/* <h3>{props.id}</h3> */}
+            {id} : {name}
         </div>
     );
 }

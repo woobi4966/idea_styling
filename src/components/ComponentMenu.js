@@ -1,3 +1,5 @@
+import { DndProvider, useDrop } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 import css from './ComponentMenu.module.css';
 import ExComponent from './ExComponent';
 
@@ -9,32 +11,35 @@ function ComponentMenu( props ){
     // 1. DRAG AND DROP
     ////////////////////////////////////
 
-    function drop(e){
-        const component_id = e.dataTransfer.getData("component_id");
-        const component = document.getElementById(component_id);
-        
-        e.target.appendChild(component); //HTML 뒷 부분에 추가한다.
-    }
-
-    function dragOver(e) {
-        e.preventDefault();
-    }
+    // const [{isOver}, drop] = useDrop(() => ({
+    //     accept : "component",
+    //     drop: (item) => addComponentToBoard(item.id), 
+    //     collect : (monitor) => ({
+    //         isOver : monitor.isOver(),
+    //     }),
+    // }));
+    
+    // const addComponentToBoard = (id) => {console.log(id)};
 
     return(
         <div
             className={css.section}
             style={{height: newHeight + 'px'}}
         >
-            <div
+            <DndProvider
+                backend={HTML5Backend}
                 className={css.componentList}
-                onDrop = {drop}
-                onDragOver = {dragOver}
             >
                 <ExComponent id="1" name="ExComponent" />
-                <ExComponent id="1" name="ExComponent" />
-                <ExComponent id="1" name="ExComponent" />
+                <ExComponent id="2" name="ExComponent" />
+                <ExComponent id="3" name="ExComponent" />
+
+
+                <ExComponent id="3" name="droppable" />
                 
-            </div>
+
+                {/* <div className={css.dndBoard} ref={drop}></div> */}
+            </DndProvider>
         </div>
     );
 }
